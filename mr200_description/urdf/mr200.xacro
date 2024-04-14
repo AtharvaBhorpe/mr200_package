@@ -1,0 +1,223 @@
+<?xml version="1.0" ?>
+<robot name="mr200" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find mr200_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find mr200_description)/urdf/mr200.trans" />
+<xacro:include filename="$(find mr200_description)/urdf/mr200.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.07679557576852775 -0.023736954369506055 0.06294095797431326" rpy="0 0 0"/>
+    <mass value="9.317530123689448"/>
+    <inertia ixx="0.215516" iyy="0.143584" izz="0.27652" ixy="0.002399" iyz="5.4e-05" ixz="-0.000155"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mr200_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mr200_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rplidar_1">
+  <inertial>
+    <origin xyz="-9.181657287017642e-05 -0.006768341282241918 0.032611693778329356" rpy="0 0 0"/>
+    <mass value="0.16237830489081495"/>
+    <inertia ixx="0.000117" iyy="7.5e-05" izz="0.000134" ixy="0.0" iyz="-1.9e-05" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.075406 0.024157 -0.080698" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mr200_description/meshes/rplidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.075406 0.024157 -0.080698" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mr200_description/meshes/rplidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="castor_rear_left_1">
+  <inertial>
+    <origin xyz="-0.029231509980367977 0.0007292728564790019 -0.04433447431328272" rpy="0 0 0"/>
+    <mass value="0.1395263038993923"/>
+    <inertia ixx="8.8e-05" iyy="0.000134" izz="7.6e-05" ixy="1e-06" iyz="1e-06" ixz="-2.5e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.039585 -0.176349 0.017302" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mir200_description/meshes/castor_rear_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.039585 -0.176349 0.017302" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mir200_description/meshes/castor_rear_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="castor_rear_right_1">
+  <inertial>
+    <origin xyz="0.02923182208658817 -0.0007293707202937483 -0.04433447431352407" rpy="0 0 0"/>
+    <mass value="0.13952630389826487"/>
+    <inertia ixx="8.8e-05" iyy="0.000134" izz="7.6e-05" ixy="1e-06" iyz="-1e-06" ixz="2.5e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.190565 -0.176349 0.017302" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mir200_description/meshes/castor_rear_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.190565 -0.176349 0.017302" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mir200_description/meshes/castor_rear_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="castor_front_right_1">
+  <inertial>
+    <origin xyz="0.030146030253309725 -0.004487117455414608 -0.04557271191093" rpy="0 0 0"/>
+    <mass value="0.021996044585228164"/>
+    <inertia ixx="1.3e-05" iyy="1.8e-05" izz="1.1e-05" ixy="0.0" iyz="-1e-06" ixz="3e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.190565 0.227501 0.017302" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mir200_description/meshes/castor_front_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.190565 0.227501 0.017302" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mir200_description/meshes/castor_front_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="castor_front_left_1">
+  <inertial>
+    <origin xyz="-0.029231509980504562 0.0007292728564819717 -0.044334474313530894" rpy="0 0 0"/>
+    <mass value="0.13952630389835893"/>
+    <inertia ixx="8.8e-05" iyy="0.000134" izz="7.6e-05" ixy="1e-06" iyz="1e-06" ixz="-2.5e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.039585 0.227501 0.017302" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mir200_description/meshes/castor_front_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.039585 0.227501 0.017302" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mir200_description/meshes/castor_front_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_left_1">
+  <inertial>
+    <origin xyz="0.0558607712859321 -4.8931906054816565e-08 -7.2850192194169605e-06" rpy="0 0 0"/>
+    <mass value="0.8231629072219856"/>
+    <inertia ixx="0.002162" iyy="0.001281" izz="0.001281" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.05151 0.025576 0.029402" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mir200_description/meshes/motor_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.05151 0.025576 0.029402" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mir200_description/meshes/motor_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_right_1">
+  <inertial>
+    <origin xyz="-0.05586085075665298 -4.8931914263528054e-08 6.376790598495302e-06" rpy="0 0 0"/>
+    <mass value="0.8231629072219859"/>
+    <inertia ixx="0.002162" iyy="0.001281" izz="0.001281" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.202322 0.025576 0.029402" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mir200_description/meshes/motor_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.202322 0.025576 0.029402" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mir200_description/meshes/motor_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid 2" type="fixed">
+  <origin xyz="-0.075406 -0.024157 0.080698" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="rplidar_1"/>
+</joint>
+
+<joint name="Revolute 3" type="continuous">
+  <origin xyz="0.039585 0.176349 -0.017302" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="castor_rear_left_1"/>
+  <axis xyz="0.0 -0.0 -1.0"/>
+</joint>
+
+<joint name="Revolute 4" type="continuous">
+  <origin xyz="-0.190565 0.176349 -0.017302" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="castor_rear_right_1"/>
+  <axis xyz="-0.0 -0.0 -1.0"/>
+</joint>
+
+<joint name="Revolute 5" type="continuous">
+  <origin xyz="-0.190565 -0.227501 -0.017302" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="castor_front_right_1"/>
+  <axis xyz="-0.0 -0.0 -1.0"/>
+</joint>
+
+<joint name="Revolute 6" type="continuous">
+  <origin xyz="0.039585 -0.227501 -0.017302" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="castor_front_left_1"/>
+  <axis xyz="0.0 -0.0 -1.0"/>
+</joint>
+
+<joint name="Revolute 7" type="continuous">
+  <origin xyz="0.05151 -0.025576 -0.029402" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="motor_left_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+</joint>
+
+<joint name="Revolute 8" type="continuous">
+  <origin xyz="-0.202322 -0.025576 -0.029402" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="motor_right_1"/>
+  <axis xyz="1.0 0.0 -0.0"/>
+</joint>
+
+</robot>
