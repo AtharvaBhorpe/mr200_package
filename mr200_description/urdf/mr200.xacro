@@ -158,7 +158,8 @@
     <inertia ixx="0.000619" iyy="0.000967" izz="0.001105" ixy="-1e-06" iyz="-3e-06" ixz="0.000159"/>
   </inertial>
   <visual>
-    <origin xyz="0.001943 -0.001707 -0.298698" rpy="0 0 0"/>
+    <!-- <origin xyz="0.001943 -0.001707 -0.298698" rpy="0 0 0"/> -->
+    <origin xyz="0.001943 -0.001707 -0.228698" rpy="0 0 0"/>
     <geometry>
       <mesh filename="file://$(find mr200_description)/meshes/rplidar_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -215,9 +216,11 @@
 </joint>
 
 <joint name="rplidar" type="fixed">
-  <origin xyz="-0.001943 0.001707 0.298698" rpy="0 0 0"/>
+  <!-- <origin xyz="-0.001943 0.001707 0.298698" rpy="0 0 0"/> -->
+  <origin xyz="-0.001943 0.001707 0.22" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="rplidar_1"/>
 </joint>
+
 
 </robot>
