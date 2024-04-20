@@ -1,0 +1,223 @@
+<?xml version="1.0" ?>
+<robot name="mr200" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find mr200_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find mr200_description)/urdf/mr200.trans" />
+<xacro:include filename="$(find mr200_description)/urdf/mr200.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.004787769355087167 0.00030572260625387016 0.175609471497608" rpy="0 0 0"/>
+    <mass value="26.157510163291"/>
+    <inertia ixx="0.392514" iyy="0.620983" izz="0.799143" ixy="-5e-06" iyz="-0.000144" ixz="-0.000144"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find mr200_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find mr200_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="castor_rear_left_1">
+  <inertial>
+    <origin xyz="-0.00011232318221551796 -0.029081837311602063 -0.04413100872948909" rpy="0 0 0"/>
+    <mass value="1.1436119760636907"/>
+    <inertia ixx="0.001127" iyy="0.000726" izz="0.000627" ixy="-1e-06" iyz="-0.000211" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.202616 -0.11528 -0.091698" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find mr200_description)/meshes/castor_rear_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.202616 -0.11528 -0.091698" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find mr200_description)/meshes/castor_rear_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="castor_rear_right_1">
+  <inertial>
+    <origin xyz="0.00011138432938193055 0.02908105177292966 -0.04413100872971761" rpy="0 0 0"/>
+    <mass value="1.1436119760541357"/>
+    <inertia ixx="0.001127" iyy="0.000726" izz="0.000627" ixy="-1e-06" iyz="0.000211" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.202616 0.11487 -0.091698" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find mr200_description)/meshes/castor_rear_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.202616 0.11487 -0.091698" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find mr200_description)/meshes/castor_rear_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="castor_front_left_1">
+  <inertial>
+    <origin xyz="-0.00011232318217180293 -0.029081837311701164 -0.04413100872978269" rpy="0 0 0"/>
+    <mass value="1.1436119760549113"/>
+    <inertia ixx="0.001127" iyy="0.000726" izz="0.000627" ixy="-1e-06" iyz="-0.000211" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.201234 -0.11528 -0.091698" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find mr200_description)/meshes/castor_front_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.201234 -0.11528 -0.091698" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find mr200_description)/meshes/castor_front_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="castor_front_right_1">
+  <inertial>
+    <origin xyz="0.00011138432944279852 0.029081051772962968 -0.04413100872975386" rpy="0 0 0"/>
+    <mass value="1.1436119760548"/>
+    <inertia ixx="0.001127" iyy="0.000726" izz="0.000627" ixy="-1e-06" iyz="0.000211" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.201234 0.11487 -0.091698" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find mr200_description)/meshes/castor_front_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.201234 0.11487 -0.091698" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find mr200_description)/meshes/castor_front_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_right_1">
+  <inertial>
+    <origin xyz="-4.6942639264353596e-07 -0.055860399579083314 6.376790606527072e-06" rpy="0 0 0"/>
+    <mass value="6.948203034078167"/>
+    <inertia ixx="0.010814" iyy="0.01825" izz="0.010815" ixy="-0.0" iyz="-3e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.000691 0.126628 -0.079598" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find mr200_description)/meshes/motor_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.000691 0.126628 -0.079598" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find mr200_description)/meshes/motor_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_left_1">
+  <inertial>
+    <origin xyz="-4.6942640138318125e-07 0.05586022246351599 -7.285019209393728e-06" rpy="0 0 0"/>
+    <mass value="6.948203034076876"/>
+    <inertia ixx="0.010814" iyy="0.01825" izz="0.010815" ixy="-0.0" iyz="-3e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.000691 -0.127205 -0.079598" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find mr200_description)/meshes/motor_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.000691 -0.127205 -0.079598" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find mr200_description)/meshes/motor_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rplidar_1">
+  <inertial>
+    <origin xyz="0.0066008229239598384 -0.001510365395277357 -0.07438830622169765" rpy="0 0 0"/>
+    <mass value="1.3389387535639667"/>
+    <inertia ixx="0.000619" iyy="0.000967" izz="0.001105" ixy="-1e-06" iyz="-3e-06" ixz="0.000159"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.001943 -0.001707 -0.298698" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find mr200_description)/meshes/rplidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.001943 -0.001707 -0.298698" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find mr200_description)/meshes/rplidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="castor_rear_left" type="continuous">
+  <origin xyz="-0.202616 0.11528 0.091698" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="castor_rear_left_1"/>
+  <axis xyz="-0.0 0.0 -1.0"/>
+</joint>
+
+<joint name="castor_rear_right" type="continuous">
+  <origin xyz="-0.202616 -0.11487 0.091698" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="castor_rear_right_1"/>
+  <axis xyz="-0.0 -0.0 -1.0"/>
+</joint>
+
+<joint name="castor_front_left" type="continuous">
+  <origin xyz="0.201234 0.11528 0.091698" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="castor_front_left_1"/>
+  <axis xyz="-0.0 0.0 -1.0"/>
+</joint>
+
+<joint name="castor_front_right" type="continuous">
+  <origin xyz="0.201234 -0.11487 0.091698" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="castor_front_right_1"/>
+  <axis xyz="-0.0 -0.0 -1.0"/>
+</joint>
+
+<joint name="motor_right" type="continuous">
+  <origin xyz="-0.000691 -0.126628 0.079598" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="motor_right_1"/>
+  <axis xyz="-0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="motor_left" type="continuous">
+  <origin xyz="-0.000691 0.127205 0.079598" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="motor_left_1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+<joint name="rplidar" type="fixed">
+  <origin xyz="-0.001943 0.001707 0.298698" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="rplidar_1"/>
+</joint>
+
+</robot>
