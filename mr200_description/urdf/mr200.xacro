@@ -4,6 +4,15 @@
 <xacro:include filename="$(find mr200_description)/urdf/materials.xacro" />
 <xacro:include filename="$(find mr200_description)/urdf/mr200.trans" />
 <xacro:include filename="$(find mr200_description)/urdf/mr200.gazebo" />
+
+<link name="base_footprint"/>
+
+<joint name="base_joint" type="fixed">
+  <parent link="base_footprint"/>
+  <child link="base_link"/>
+  <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+</joint>
+
 <link name="base_link">
   <inertial>
     <origin xyz="-0.004787769355087167 0.00030572260625387016 0.175609471497608" rpy="0 0 0"/>
@@ -173,32 +182,28 @@
   </collision>
 </link>
 
-<joint name="castor_rear_left" type="continuous">
+<joint name="castor_rear_left" type="fixed">
   <origin xyz="-0.202616 0.11528 0.091698" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="castor_rear_left_1"/>
-  <axis xyz="-0.0 0.0 -1.0"/>
 </joint>
 
-<joint name="castor_rear_right" type="continuous">
+<joint name="castor_rear_right" type="fixed">
   <origin xyz="-0.202616 -0.11487 0.091698" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="castor_rear_right_1"/>
-  <axis xyz="-0.0 -0.0 -1.0"/>
 </joint>
 
-<joint name="castor_front_left" type="continuous">
+<joint name="castor_front_left" type="fixed">
   <origin xyz="0.201234 0.11528 0.091698" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="castor_front_left_1"/>
-  <axis xyz="-0.0 0.0 -1.0"/>
 </joint>
 
-<joint name="castor_front_right" type="continuous">
+<joint name="castor_front_right" type="fixed">
   <origin xyz="0.201234 -0.11487 0.091698" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="castor_front_right_1"/>
-  <axis xyz="-0.0 -0.0 -1.0"/>
 </joint>
 
 <joint name="motor_right" type="continuous">
