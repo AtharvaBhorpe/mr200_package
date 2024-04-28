@@ -4,6 +4,8 @@
 <xacro:include filename="$(find mr200_description)/urdf/materials.xacro" />
 <xacro:include filename="$(find mr200_description)/urdf/mr200.trans" />
 <xacro:include filename="$(find mr200_description)/urdf/mr200.gazebo" />
+<xacro:include filename="$(find mr200_description)/urdf/ros2_control.xacro" />
+
 
 <link name="base_footprint"/>
 
